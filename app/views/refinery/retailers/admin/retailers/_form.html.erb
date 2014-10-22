@@ -1,3 +1,5 @@
+<% content_for :javascripts, javascript_include_tag('refinery/subregion-select') %>
+
 <%= form_for [refinery, :retailers_admin, @retailer] do |f| -%>
   <%= render '/refinery/admin/error_messages',
               :object => @retailer,
@@ -16,6 +18,16 @@
   <div class='field'>
     <%= f.label :address -%>
     <%= f.text_field :address -%>
+  </div>
+
+  <div class="field">
+    <%= f.label :country_code %><br />
+    <%= f.country_select :country_code, priority: %w(CA US), prompt: 'Please select a country' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state_code %><br />
+    <%= render partial: 'subregion_select', locals: {parent_region: f.object.country_code} %>
   </div>
 
   <div class='field'>

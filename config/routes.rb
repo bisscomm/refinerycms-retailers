@@ -13,7 +13,8 @@ Refinery::Core::Engine.routes.draw do
           post :update_positions
         end
       end
+
+      get '/retailers/subregion_options' => 'retailers#subregion_options'
     end
   end
-
 end

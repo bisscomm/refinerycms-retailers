@@ -6,6 +6,9 @@ module Refinery
         crudify :'refinery/retailers/retailer',
                 :xhr_paging => true
 
+        def subregion_options
+          render partial: 'subregion_select'
+        end
       end
     end
   end

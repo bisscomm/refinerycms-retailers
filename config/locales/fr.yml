@@ -2,34 +2,41 @@ fr:
   refinery:
     plugins:
       retailers:
-        title: Retailers
+        title: Détaillants
     retailers:
       admin:
         retailers:
           actions:
-            create_new: Créer un(e) nouve(au/l/lle) Retailer
-            reorder: Réordonner les Retailers
-            reorder_done: Fin de réordonnancement des Retailers
+            create_new: Créer un nouveau détaillant
+            reorder: Réordonner les détaillants
+            reorder_done: Fin de réordonnancement des détaillants
+          form:
+            please_select_a_country: Sélectionnez un pays
+          subregion_select:
+            please_select_a_country_above: Selectionnez d'abord un pays
           records:
-            title: Retailers
+            title: Détaillants
             sorry_no_results: "Désolé ! Aucun résultat."
-            no_items_yet: 'Il n''y a actuellement aucun(e) Retailer. Cliquer sur "Créer un(e) nouve(au/l/lle) Retailer" pour créer votre premi(er/ère) retailer.'
+            no_items_yet: 'Il n''y a actuellement aucun détaillant. Cliquer sur "Créer un nouveau détaillant" pour créer votre premier détaillant.'
           retailer:
-            view_live_html: Voir ce(t/tte) retailer <br/><em>(Ouvre une nouvelle fenêtre)</em>
-            edit: Modifier ce(t/tte) retailer
-            delete: Supprimer définitivement ce(t/tte) retailer
+            view_live_html: Voir ce détaillant <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce détaillant
+            delete: Supprimer définitivement ce détaillant
       retailers:
         show:
-          other: Autres Retailers
+          other: Autres détaillants
   activerecord:
     attributes:
       'refinery/retailers/retailer':
-        title: Title
+        title: Titre
         contact: Contact
-        address: Address
-        zipcode: Zipcode
-        phone: Phone
-        fax: Fax
-        email: Email
-        website: Website
-        draft: Draft
+        address: Adresse
+        country_code: Pays
+        state_code: État / Province / Région
+        city: Ville
+        zipcode: Code postal
+        phone: Téléphone
+        fax: Télécopieur
+        email: Courriel
+        website: Site internet
+        draft: Brouillon

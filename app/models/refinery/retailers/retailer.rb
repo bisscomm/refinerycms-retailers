@@ -6,6 +6,8 @@ module Refinery
       validates :address, :presence => true, :uniqueness => true
 
       acts_as_indexed :fields => [:title, :contact, :address, :country_code, :state_code, :city]
+
+      scope :published, -> { where :draft => false }
     end
   end
 end

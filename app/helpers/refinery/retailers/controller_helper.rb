@@ -3,7 +3,7 @@ module Refinery
     module ControllerHelper
       protected
         def find_all_retailers
-          @retailers = Retailer.order('position ASC')
+          @retailers = Retailer.published.order('position ASC')
         end
 
         def find_page

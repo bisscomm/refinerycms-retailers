@@ -2,7 +2,26 @@
   <ul id="retailers">
     <% @retailers.each do |retailer| %>
       <li>
-        <%= link_to retailer.title, refinery.retailers_retailer_path(retailer) %>
+        <%= retailer.title %><br />
+        <%= retailer.contact %><br />
+        <%= retailer.address %><br />
+
+        <% country = Carmen::Country.coded(retailer.country_code) %>
+        <% if country %>
+          <%= country.name %><br />
+        <% end %>
+
+        <% subregion = country.subregions.coded(retailer.state_code) %>
+        <% if subregion %>
+          <%= subregion.name %><br />
+        <% end %>
+
+        <%= retailer.city %><br />
+        <%= retailer.zipcode %><br />
+        <%= retailer.phone %><br />
+        <%= retailer.fax %><br />
+        <%= link_to retailer.email, "mailto:#{retailer.email}" %><br />
+        <%= link_to retailer.website, retailer.website, target: "_blank" %>
       </li>
     <% end %>
   </ul>

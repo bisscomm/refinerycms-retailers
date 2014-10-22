@@ -1,15 +1,3 @@
-# Retailers extension for Refinery CMS.
-
-## How to build this extension as a gem (not required)
-
-    cd vendor/extensions/retailers
-    gem build refinerycms-retailers.gemspec
-    gem install refinerycms-retailers.gem
-
-    # Sign up for a http://rubygems.org/ account and publish the gem
-    gem push refinerycms-retailers.gem
-
-
 # Refinery CMS Retailers
 
 Retailers engine for [Refinery CMS](http://refinerycms.com) allows you to display retailers.

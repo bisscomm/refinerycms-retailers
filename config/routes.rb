@@ -1,8 +1,8 @@
 Refinery::Core::Engine.routes.draw do
 
   # Frontend routes
-  namespace :retailers do
-    resources :retailers, :path => '', :only => [:index, :show]
+  namespace :retailers, :path => '' do
+    resources :retailers, :path => Refinery::Retailers.page_path_index, :only => [:index]
   end
 
   # Admin routes

@@ -7,6 +7,7 @@ class CreateRetailersRetailers < ActiveRecord::Migration
       t.string :address
       t.string :country_code, :limit => 2
       t.string :state_code
+      t.string :city
       t.string :zipcode
       t.string :phone
       t.string :fax

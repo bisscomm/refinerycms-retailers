@@ -1,0 +1,35 @@
+fr:
+  refinery:
+    plugins:
+      retailers:
+        title: Retailers
+    retailers:
+      admin:
+        retailers:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Retailer
+            reorder: Réordonner les Retailers
+            reorder_done: Fin de réordonnancement des Retailers
+          records:
+            title: Retailers
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Retailer. Cliquer sur "Créer un(e) nouve(au/l/lle) Retailer" pour créer votre premi(er/ère) retailer.'
+          retailer:
+            view_live_html: Voir ce(t/tte) retailer <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) retailer
+            delete: Supprimer définitivement ce(t/tte) retailer
+      retailers:
+        show:
+          other: Autres Retailers
+  activerecord:
+    attributes:
+      'refinery/retailers/retailer':
+        title: Title
+        contact: Contact
+        address: Address
+        zipcode: Zipcode
+        phone: Phone
+        fax: Fax
+        email: Email
+        website: Website
+        draft: Draft

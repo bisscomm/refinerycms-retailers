@@ -1,0 +1,35 @@
+tr:
+  refinery:
+    plugins:
+      retailers:
+        title: Retailers
+    retailers:
+      admin:
+        retailers:
+          actions:
+            create_new: Yeni Ekle Retailer
+            reorder: Tekrar sirala Retailers
+            reorder_done: Tekrar siralama tamamlandiRetailers
+          records:
+            title: Retailers
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Retailers yok henuz.  Tikla "Yeni Ekle Retailer" eklemek senin ilk retailer.
+          retailer:
+            view_live_html: Bunu canlu retailer goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle retailer
+            delete: Bunu Sil retailer sonsuza dek
+      retailers:
+        show:
+          other: Diger Retailers
+  activerecord:
+    attributes:
+      'refinery/retailers/retailer':
+        title: Title
+        contact: Contact
+        address: Address
+        zipcode: Zipcode
+        phone: Phone
+        fax: Fax
+        email: Email
+        website: Website
+        draft: Draft

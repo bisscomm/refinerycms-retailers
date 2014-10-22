@@ -1,0 +1,35 @@
+nb:
+  refinery:
+    plugins:
+      retailers:
+        title: Retailers
+    retailers:
+      admin:
+        retailers:
+          actions:
+            create_new: Lag en ny Retailer
+            reorder: Endre rekkefølgen på Retailers
+            reorder_done: Ferdig å endre rekkefølgen Retailers
+          records:
+            title: Retailers
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Retailers enda. Klikk på "Lag en ny Retailer" for å legge til din første retailer.
+          retailer:
+            view_live_html: Vis hvordan denne retailer ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne retailer
+            delete: Fjern denne retailer permanent
+      retailers:
+        show:
+          other: Andre Retailers
+  activerecord:
+    attributes:
+      'refinery/retailers/retailer':
+        title: Title
+        contact: Contact
+        address: Address
+        zipcode: Zipcode
+        phone: Phone
+        fax: Fax
+        email: Email
+        website: Website
+        draft: Draft

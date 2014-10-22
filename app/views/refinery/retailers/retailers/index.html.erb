@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="retailers">
+    <% @retailers.each do |retailer| %>
+      <li>
+        <%= link_to retailer.title, refinery.retailers_retailer_path(retailer) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

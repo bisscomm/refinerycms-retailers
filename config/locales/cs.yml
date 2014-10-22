@@ -1,0 +1,35 @@
+cs:
+  refinery:
+    plugins:
+      retailers:
+        title: Retailers
+    retailers:
+      admin:
+        retailers:
+          actions:
+            create_new: Přidat Retailer
+            reorder: Řadit Retailers
+            reorder_done: Konec řazení Retailers
+          records:
+            title: Retailers
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Retailers. Zvolte "Přidat Retailer" pro přidání prvního retailer.
+          retailer:
+            view_live_html: Zobrazit náhled retailer<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit retailer
+            delete: Smazat retailer
+      retailers:
+        show:
+          other: Další Retailers
+  activerecord:
+    attributes:
+      'refinery/retailers/retailer':
+        title: Title
+        contact: Contact
+        address: Address
+        zipcode: Zipcode
+        phone: Phone
+        fax: Fax
+        email: Email
+        website: Website
+        draft: Draft

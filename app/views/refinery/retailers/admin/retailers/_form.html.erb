@@ -1,0 +1,55 @@
+<%= form_for [refinery, :retailers_admin, @retailer] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @retailer,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :contact -%>
+    <%= f.text_field :contact -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :address -%>
+    <%= f.text_field :address -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :zipcode -%>
+    <%= f.text_field :zipcode -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :phone -%>
+    <%= f.text_field :phone -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :fax -%>
+    <%= f.text_field :fax -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :website -%>
+    <%= f.text_field :website -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :draft -%>
+    <%= f.check_box :draft, :checked => @retailer[:draft] -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.retailers.admin.retailers.retailer'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @retailer.title) -%>
+<% end -%>

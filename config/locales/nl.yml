@@ -1,0 +1,35 @@
+nl:
+  refinery:
+    plugins:
+      retailers:
+        title: Retailers
+    retailers:
+      admin:
+        retailers:
+          actions:
+            create_new: Nieuwe Retailer toevoegen
+            reorder: De volgorde van de Retailers wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Retailer-volgorde
+          records:
+            title: Retailers
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Retailers. Druk op 'Nieuwe Retailer toevoegen' om de eerste toe te voegen.
+          retailer:
+            view_live_html: Deze retailer op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze retailer
+            delete: Deze retailer definitief verwijderen
+      retailers:
+        show:
+          other: Andere Retailers
+  activerecord:
+    attributes:
+      'refinery/retailers/retailer':
+        title: Title
+        contact: Contact
+        address: Address
+        zipcode: Zipcode
+        phone: Phone
+        fax: Fax
+        email: Email
+        website: Website
+        draft: Draft

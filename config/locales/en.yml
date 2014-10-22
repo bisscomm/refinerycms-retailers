@@ -1,0 +1,35 @@
+en:
+  refinery:
+    plugins:
+      retailers:
+        title: Retailers
+    retailers:
+      admin:
+        retailers:
+          actions:
+            create_new: Add New Retailer
+            reorder: Reorder Retailers
+            reorder_done: Done Reordering Retailers
+          records:
+            title: Retailers
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Retailers yet. Click "Add New Retailer" to add your first retailer.
+          retailer:
+            view_live_html: View this retailer live <br/><em>(opens in a new window)</em>
+            edit: Edit this retailer
+            delete: Remove this retailer forever
+      retailers:
+        show:
+          other: Other Retailers
+  activerecord:
+    attributes:
+      'refinery/retailers/retailer':
+        title: Title
+        contact: Contact
+        address: Address
+        zipcode: Zipcode
+        phone: Phone
+        fax: Fax
+        email: Email
+        website: Website
+        draft: Draft

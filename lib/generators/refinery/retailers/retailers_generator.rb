@@ -2,7 +2,7 @@ module Refinery
   class RetailersGenerator < Rails::Generators::Base
     source_root File.expand_path('../templates', __FILE__)
 
-    def generate_inquiries_initializer
+    def generate_retailers_initializer
       template 'config/initializers/refinery/retailers.rb.erb', File.join(destination_root, 'config', 'initializers', 'refinery', 'retailers.rb')
     end
 

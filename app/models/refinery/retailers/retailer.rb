@@ -6,10 +6,7 @@ module Refinery
 
       validates :title, :presence => true, :uniqueness => true
 
-      # To enable admin searching, add acts_as_indexed on searchable fields, for example:
-      #
-      #   acts_as_indexed :fields => [:title]
-
+      acts_as_indexed :fields => [:title, :contact, :address, :country_code, :state_code, :city]
     end
   end
 end

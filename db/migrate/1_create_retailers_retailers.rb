@@ -10,7 +10,7 @@ class CreateRetailersRetailers < ActiveRecord::Migration
       t.string :fax
       t.string :email
       t.string :website
-      t.boolean :draft
+      t.boolean :draft, default: true
       t.integer :position
 
       t.timestamps

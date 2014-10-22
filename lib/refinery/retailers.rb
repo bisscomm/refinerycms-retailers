@@ -1,10 +1,12 @@
 require 'refinerycms-core'
+require 'carmen-rails'
 
 module Refinery
-  autoload :RetailersGenerator, 'generators/refinery/retailers_generator'
+  autoload :RetailersGenerator, 'generators/refinery/retailers/retailers_generator'
 
   module Retailers
     require 'refinery/retailers/engine'
+    require 'refinery/retailers/configuration'
 
     class << self
       attr_writer :root

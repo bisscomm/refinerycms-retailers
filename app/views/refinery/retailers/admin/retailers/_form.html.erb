@@ -22,7 +22,7 @@
 
   <div class="field">
     <%= f.label :country_code %><br />
-    <%= f.country_select :country_code, priority: %w(CA US), prompt: 'Please select a country' %>
+    <%= f.country_select :country_code, priority: Refinery::Retailers.country_priority, prompt: 'Please select a country' %>
   </div>
 
   <div class="field">

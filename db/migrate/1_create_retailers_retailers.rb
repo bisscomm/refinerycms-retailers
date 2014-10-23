@@ -27,7 +27,7 @@ class CreateRetailersRetailers < ActiveRecord::Migration
     end
 
     if defined?(::Refinery::Page)
-      ::Refinery::Page.delete_all({:link_url => "/retailers/retailers"})
+      ::Refinery::Page.delete_all(:link_url => Refinery::Retailers.page_path_index)
     end
 
     drop_table :refinery_retailers

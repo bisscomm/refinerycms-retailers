@@ -12,27 +12,27 @@
 
   <div class='field'>
     <%= f.label :contact -%>
-    <%= f.text_field :contact -%>
+    <%= f.text_field :contact, :class => 'widest' -%>
   </div>
 
   <div class='field'>
     <%= f.label :address -%>
-    <%= f.text_field :address -%>
+    <%= f.text_field :address, :class => 'widest' -%>
   </div>
 
   <div class="field">
-    <%= f.label :country_code %><br />
+    <%= f.label :country_code %>
     <%= f.country_select :country_code, priority: Refinery::Retailers.country_priority, prompt: t('.please_select_a_country') %>
   </div>
 
   <div class="field">
-    <%= f.label :state_code %><br />
+    <%= f.label :state_code %>
     <%= render partial: 'subregion_select', locals: {parent_region: f.object.country_code} %>
   </div>
 
   <div class='field'>
     <%= f.label :city -%>
-    <%= f.text_field :city -%>
+    <%= f.text_field :city, :class => 'widest' -%>
   </div>
 
   <div class='field'>
@@ -52,12 +52,12 @@
 
   <div class='field'>
     <%= f.label :email -%>
-    <%= f.text_field :email -%>
+    <%= f.text_field :email, :class => 'widest' -%>
   </div>
 
   <div class='field'>
     <%= f.label :website -%>
-    <%= f.text_field :website -%>
+    <%= f.text_field :website, :class => 'widest' -%>
   </div>
 
   <div class='field'>

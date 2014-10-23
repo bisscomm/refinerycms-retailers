@@ -1,10 +1,15 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(retailer) -%>">
   <span class='title'>
     <%= retailer.title %>
-
+    <% if retailer.draft? %>
+      <span class="label notice"><%= t('refinery.blog.admin.posts.post.draft') %></span>
+    <% end %>
+    <span class="preview">
+      <%= inline_address(retailer) %>
+    </span>
   </span>
-  <span class='actions'>
 
+  <span class='actions'>
     <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_retailers_admin_retailer_path(retailer),
          :title => t('.edit') %>
     <%= link_to refinery_icon_tag("delete.png"), refinery.retailers_admin_retailer_path(retailer),

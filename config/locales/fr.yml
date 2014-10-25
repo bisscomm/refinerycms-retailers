@@ -22,6 +22,7 @@ fr:
             view_live_html: Voir ce détaillant <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce détaillant
             delete: Supprimer définitivement ce détaillant
+            draft: Brouillon
       retailers:
         show:
           other: Autres détaillants

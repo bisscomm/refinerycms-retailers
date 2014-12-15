@@ -9,6 +9,8 @@ module Refinery
 
       acts_as_indexed :fields => [:title, :contact, :address, :country_code, :state_code, :city]
 
+      default_scope { order('lower(title) ASC') }
+
       scope :published, -> { where :draft => false }
 
       protected

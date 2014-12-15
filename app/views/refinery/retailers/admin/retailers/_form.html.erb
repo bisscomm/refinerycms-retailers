@@ -11,8 +11,25 @@
   </div>
 
   <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:body],
+                :object => "retailers/retailer" -%>
+  </div>
+
+  <div class='field'>
     <%= f.label :contact -%>
     <%= f.text_field :contact, :class => 'widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email, :class => 'widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :website -%>
+    <%= f.text_field :website, :class => 'widest' -%>
   </div>
 
   <div class='field'>
@@ -48,16 +65,6 @@
   <div class='field'>
     <%= f.label :fax -%>
     <%= f.text_field :fax -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :email -%>
-    <%= f.text_field :email, :class => 'widest' -%>
-  </div>
-
-  <div class='field'>
-    <%= f.label :website -%>
-    <%= f.text_field :website, :class => 'widest' -%>
   </div>
 
   <div class='field'>

@@ -14,7 +14,7 @@ module Refinery
         private
 
           def retailer_params
-            params.require(:retailer).permit(:title, :contact, :address, :country_code,
+            params.require(:retailer).permit(:title, :body, :contact, :address, :country_code,
               :state_code, :city, :zipcode, :phone, :fax, :email, :website, :draft)
           end
       end

@@ -1,19 +1,20 @@
 <% content_for :body do %>
-  <% @retailer_countries.sort.each do |country, retailers| %>
+  <% @retailer_countries.each do |country, retailers| %>
     <h2><%= country_name(country) %></h2>
     <ul id="retailers">
       <% for retailer in retailers %>
         <li>
           <%= retailer.title %><br />
+          <%= retailer.body %><br />
           <%= retailer.contact %><br />
+          <%= link_to retailer.email, "mailto:#{retailer.email}" %><br />
+          <%= link_to retailer.website, retailer.website, target: "_blank" %>
           <%= retailer.address %><br />
           <%= retailer.city %><br />
           <%= subregion_name(retailer.country_code, retailer.state_code) %><br />
           <%= retailer.zipcode %><br />
           <%= retailer.phone %><br />
           <%= retailer.fax %><br />
-          <%= link_to retailer.email, "mailto:#{retailer.email}" %><br />
-          <%= link_to retailer.website, retailer.website, target: "_blank" %>
         </li>
       <% end %>
     </ul>

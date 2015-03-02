@@ -7,7 +7,7 @@
           <%= retailer.title %><br />
           <%= retailer.body %><br />
           <%= retailer.contact %><br />
-          <%= link_to retailer.email, "mailto:#{retailer.email}" %><br />
+          <%= mail_to retailer.email, t('.email'), encode: 'hex' %><br />
           <%= link_to retailer.website, retailer.website, target: "_blank" %>
           <%= retailer.address %><br />
           <%= retailer.city %><br />

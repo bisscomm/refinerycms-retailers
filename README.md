@@ -16,7 +16,7 @@ This version of `refinerycms-retailers` supports Refinery 3.x and Rails 4.1.x.
 Open up your ``Gemfile`` and add at the bottom this line:
 
 ```ruby
-gem 'refinerycms-retailers', git: 'https://github.com/bisscomm/refinerycms-retailers', branch: 'master'
+gem 'refinerycms-retailers', github: 'bisscomm/refinerycms-retailers', branch: 'master'
 ```
 
 Now, run ``bundle install``

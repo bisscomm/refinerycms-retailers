@@ -1,0 +1,78 @@
+<li class="retailer">
+    <div class="vcard">
+      <h3 class="org">
+        <%= retailer.title %>
+      </h3>
+
+      <div class="info">
+        <% if retailer.body %>
+          <div class="note">
+            <%= raw retailer.body %>
+          </div>
+        <% end %>
+
+        <p class="adr">
+          <span class="street-address">
+            <%= retailer.address %>
+          </span>
+
+          <span class="locality">
+            <%= "#{retailer.city}, #{subregion_name(retailer.country_code, retailer.state_code)}" %>
+          </span>
+
+          <% if retailer.zipcode.present? %>
+            <span class="postal-code">
+              <%= retailer.zipcode %>
+            </span>
+          <% end %>
+
+          <% if retailer.zipcode.present? %>
+            <span class="country-name visuallyhidden">
+              <%= country_name(retailer.country_code) %>
+            </span>
+          <% end %>
+        </p>
+
+        <p>
+          <% if retailer.fax.present? %>
+            <span class="fax">
+              <span class="label">
+                <%= "#{t('.fax')} " %>
+              </span>
+
+              <span class="value">
+                <%= "#{retailer.fax}" %>
+              </span>
+            </span>
+          <% end %>
+
+          <% if retailer.phone.present? %>
+            <span class="tel">
+              <%= link_to t('.phone', phone: retailer.phone).html_safe, "tel:#{retailer.phone}" %>
+            </span>
+          <% end %>
+
+          <% if retailer.website.present? %>
+            <span class="url">
+              <%= link_to t('.website'), retailer.website, target: "_blank", title: t('.of_retailer', retailer: retailer.title) %>
+            </span>
+          <% end %>
+
+          <% if retailer.contact.present? && retailer.email.present? %>
+            <h4 class="contact">
+              <%= t('.contact') %>
+            </h4>
+            <p class="fn email">
+              <%= mail_to retailer.email, retailer.contact, encode: 'hex' %>
+            </p>
+          <% else %>
+            <% if retailer.email.present? %>
+              <span class="email">
+                <%= mail_to retailer.email, t('.email'), encode: 'hex' %>
+              </span>
+            <% end %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+</li>

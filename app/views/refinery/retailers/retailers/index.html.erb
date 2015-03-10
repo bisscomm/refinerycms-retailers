@@ -1,24 +1,12 @@
 <% content_for :body do %>
-  <% @retailer_countries.each do |country, retailers| %>
-    <h2><%= country_name(country) %></h2>
-    <ul id="retailers">
-      <% for retailer in retailers %>
-        <li>
-          <%= retailer.title %><br />
-          <%= retailer.body %><br />
-          <%= retailer.contact %><br />
-          <%= mail_to retailer.email, t('.email'), encode: 'hex' %><br />
-          <%= link_to retailer.website, retailer.website, target: "_blank" %>
-          <%= retailer.address %><br />
-          <%= retailer.city %><br />
-          <%= subregion_name(retailer.country_code, retailer.state_code) %><br />
-          <%= retailer.zipcode %><br />
-          <%= retailer.phone %><br />
-          <%= retailer.fax %><br />
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
+  <div id="retailers">
+    <% @retailers.each do |country, retailers| %>
+      <h2><%= country_name(country) %></h2>
+      <ul id="<%= country %>">
+        <%= render partial: 'retailer', collection: retailers %>
+      </ul>
+    <% end %>
+  </div>
 <% end %>
 
 <%= render '/refinery/content_page' %>

@@ -24,8 +24,12 @@ fr:
             delete: Supprimer définitivement ce détaillant
             draft: Brouillon
       retailers:
-        show:
-          other: Autres détaillants
+        retailer:
+          email: "Courriel <span class='visuallyhidden'>%{title}</span>"
+          website: "Site internet <span class='visuallyhidden'>%{title}</span>"
+          phone: "<span class='label'>Téléphone : </span><span class='value'>%{phone}</span>"
+          fax: "Télécopieur :"
+          contact: Personne ressource
   activerecord:
     attributes:
       'refinery/retailers/retailer':

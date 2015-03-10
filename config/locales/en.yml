@@ -20,8 +20,12 @@ en:
             delete: Remove this retailer forever
             draft: Draft
       retailers:
-        show:
-          other: Other Retailers
+        retailer:
+          email: "Email <span class='visuallyhidden'>%{title}</span>"
+          website: "Website <span class='visuallyhidden'>%{title}</span>"
+          phone: "<span class='label'>Phone : </span><span class='value'>%{phone}</span>"
+          fax: "Fax :"
+          contact: Contact
   activerecord:
     attributes:
       'refinery/retailers/retailer':

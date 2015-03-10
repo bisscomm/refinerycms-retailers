@@ -54,7 +54,7 @@
 
           <% if retailer.website.present? %>
             <span class="url">
-              <%= link_to t('.website'), retailer.website, target: "_blank", title: t('.of_retailer', retailer: retailer.title) %>
+              <%= link_to t('.website', title: retailer.title).html_safe, retailer.website, target: "_blank" %>
             </span>
           <% end %>
 
@@ -68,7 +68,7 @@
           <% else %>
             <% if retailer.email.present? %>
               <span class="email">
-                <%= mail_to retailer.email, t('.email'), encode: 'hex' %>
+                <%= mail_to retailer.email, t('.email', title: retailer.title).html_safe, encode: 'hex' %>
               </span>
             <% end %>
           <% end %>

@@ -1,7 +1,7 @@
 <% content_for :body do %>
-  <div id="retailers">
+  <div id="retailers-list">
     <% @retailers.each do |country, retailers| %>
-      <div id="<%= country.downcase %>">
+      <div id="<%= country.downcase %>" class="countries">
         <h2><%= country_name(country) %></h2>
         <ul>
           <%= render partial: 'retailer', collection: retailers %>
@@ -24,4 +24,6 @@
   <% end %>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+<div id="retailers-page">
+  <%= render '/refinery/content_page' %>
+</div>

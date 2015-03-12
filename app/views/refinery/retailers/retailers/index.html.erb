@@ -1,12 +1,27 @@
 <% content_for :body do %>
   <div id="retailers">
     <% @retailers.each do |country, retailers| %>
-      <h2><%= country_name(country) %></h2>
-      <ul id="<%= country %>">
-        <%= render partial: 'retailer', collection: retailers %>
-      </ul>
+      <div id="<%= country.downcase %>">
+        <h2><%= country_name(country) %></h2>
+        <ul>
+          <%= render partial: 'retailer', collection: retailers %>
+        </ul>
+      </div>
     <% end %>
   </div>
+<% end %>
+
+<% if @retailers.many? %>
+  <% content_for :side_body do %>
+    <nav id="retailers-countries">
+      <h2><%= t('.retailers_countries') %></h2>
+      <ul>
+        <% @retailers.each do |country, retailers| %>
+          <li><%= link_to country_name(country), "##{country.downcase}" %></li>
+        <% end %>
+      </ul>
+    </nav>
+  <% end %>
 <% end %>
 
 <%= render '/refinery/content_page' %>

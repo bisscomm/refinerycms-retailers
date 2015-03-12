@@ -20,6 +20,8 @@ en:
             delete: Remove this retailer forever
             draft: Draft
       retailers:
+        index:
+          retailers_countries: Pays
         retailer:
           email: "Email <span class='visuallyhidden'>%{title}</span>"
           website: "Website <span class='visuallyhidden'>%{title}</span>"

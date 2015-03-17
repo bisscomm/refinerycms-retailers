@@ -48,7 +48,7 @@
 
           <% if retailer.phone.present? %>
             <span class="tel">
-              <%= link_to t('.phone', phone: retailer.phone).html_safe, "tel:#{retailer.phone}" %>
+              <%= t('.phone', phone: retailer.phone).html_safe %>
             </span>
           <% end %>
 

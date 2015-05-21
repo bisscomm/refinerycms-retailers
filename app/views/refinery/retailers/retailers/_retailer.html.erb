@@ -26,7 +26,7 @@
             </span>
           <% end %>
 
-          <% if retailer.zipcode.present? %>
+          <% if retailer.country_code.present? %>
             <span class="country-name visuallyhidden">
               <%= country_name(retailer.country_code) %>
             </span>

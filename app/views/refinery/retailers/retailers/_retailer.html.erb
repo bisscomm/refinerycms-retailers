@@ -12,13 +12,17 @@
         <% end %>
 
         <p class="adr">
-          <span class="street-address">
-            <%= retailer.address %>
-          </span>
+          <% if retailer.address.present? %>
+            <span class="street-address">
+              <%= retailer.address %>
+            </span>
+          <% end %>
 
-          <span class="locality">
-            <%= "#{retailer.city}, #{subregion_name(retailer.country_code, retailer.state_code)}" %>
-          </span>
+          <% if retailer.country_code.present? && retailer.state_code.present? %>
+            <span class="locality">
+              <%= "#{retailer.city}, #{subregion_name(retailer.country_code, retailer.state_code)}" %>
+            </span>
+          <% end %>
 
           <% if retailer.zipcode.present? %>
             <span class="postal-code">
@@ -26,14 +30,15 @@
             </span>
           <% end %>
 
-          <% if retailer.zipcode.present? %>
+          <% if retailer.country_code.present? %>
             <span class="country-name visuallyhidden">
               <%= country_name(retailer.country_code) %>
             </span>
           <% end %>
-        </p>
 
+        </p>
         <p>
+
           <% if retailer.fax.present? %>
             <span class="fax">
               <span class="label">
@@ -66,11 +71,13 @@
               <%= mail_to retailer.email, retailer.contact, encode: 'hex' %>
             </p>
           <% else %>
+
             <% if retailer.email.present? %>
               <span class="email">
                 <%= mail_to retailer.email, t('.email', title: retailer.title).html_safe, encode: 'hex' %>
               </span>
             <% end %>
+
           <% end %>
         </p>
       </div>

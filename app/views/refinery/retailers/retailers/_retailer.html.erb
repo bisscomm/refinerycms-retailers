@@ -5,28 +5,32 @@
       </h3>
 
       <div class="info">
-        <% if retailer.body %>
+        <% if retailer.body? %>
           <div class="note">
             <%= raw retailer.body %>
           </div>
         <% end %>
 
         <p class="adr">
-          <span class="street-address">
-            <%= retailer.address %>
-          </span>
+          <% if retailer.address? %>
+            <span class="street-address">
+              <%= retailer.address %>
+            </span>
+          <% end %>
 
-          <span class="locality">
-            <%= "#{retailer.city}, #{subregion_name(retailer.country_code, retailer.state_code)}" %>
-          </span>
+          <% if retailer.country_code? && retailer.state_code? %>
+            <span class="locality">
+              <%= "#{retailer.city}, #{subregion_name(retailer.country_code, retailer.state_code)}" %>
+            </span>
+          <% end %>
 
-          <% if retailer.zipcode.present? %>
+          <% if retailer.zipcode? %>
             <span class="postal-code">
               <%= retailer.zipcode %>
             </span>
           <% end %>
 
-          <% if retailer.zipcode.present? %>
+          <% if retailer.country_code? %>
             <span class="country-name visuallyhidden">
               <%= country_name(retailer.country_code) %>
             </span>
@@ -34,7 +38,7 @@
         </p>
 
         <p>
-          <% if retailer.fax.present? %>
+          <% if retailer.fax? %>
             <span class="fax">
               <span class="label">
                 <%= "#{t('.fax')} " %>
@@ -46,19 +50,19 @@
             </span>
           <% end %>
 
-          <% if retailer.phone.present? %>
+          <% if retailer.phone? %>
             <span class="tel">
               <%= t('.phone', phone: retailer.phone).html_safe %>
             </span>
           <% end %>
 
-          <% if retailer.website.present? %>
+          <% if retailer.website? %>
             <span class="url">
               <%= link_to t('.website', title: retailer.title).html_safe, retailer.website, target: "_blank" %>
             </span>
           <% end %>
 
-          <% if retailer.contact.present? && retailer.email.present? %>
+          <% if retailer.contact? && retailer.email? %>
             <h4 class="contact">
               <%= t('.contact') %>
             </h4>
@@ -66,7 +70,7 @@
               <%= mail_to retailer.email, retailer.contact, encode: 'hex' %>
             </p>
           <% else %>
-            <% if retailer.email.present? %>
+            <% if retailer.email? %>
               <span class="email">
                 <%= mail_to retailer.email, t('.email', title: retailer.title).html_safe, encode: 'hex' %>
               </span>

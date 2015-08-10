@@ -1,5 +1,8 @@
 # Refinery CMS Retailers
 
+[![Build Status](https://travis-ci.org/bisscomm/refinerycms-retailers.svg?branch=master)](https://travis-ci.org/refinery/refinerycms) [![Code Climate](https://codeclimate.com/github/bisscomm/refinerycms-retailers/badges/gpa.svg)](https://codeclimate.com/github/bisscomm/refinerycms-retailers) [![Test Coverage](https://codeclimate.com/github/bisscomm/refinerycms-retailers/badges/coverage.svg)](https://codeclimate.com/github/bisscomm/refinerycms-retailers/coverage)
+
+
 Retailers engine for [Refinery CMS](http://refinerycms.com) allows you to display retailers.
 
 ### In summary you can:

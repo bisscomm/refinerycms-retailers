@@ -25,7 +25,7 @@ fr:
             draft: Brouillon
       retailers:
         index:
-          retailers_countries: Countries
+          retailers_countries: Pays
         retailer:
           email: "Courriel <span class='visuallyhidden'>%{title}</span>"
           website: "Site internet <span class='visuallyhidden'>%{title}</span>"

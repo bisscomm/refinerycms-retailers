@@ -1,5 +1,4 @@
 require 'refinerycms-core'
-require 'carmen-rails'
 
 module Refinery
   autoload :RetailersGenerator, 'generators/refinery/retailers/retailers_generator'
@@ -20,4 +19,9 @@ module Refinery
       end
     end
   end
+end
+
+ActiveSupport.on_load(:active_record) do
+  require 'carmen-rails'
+  require 'globalize'
 end

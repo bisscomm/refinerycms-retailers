@@ -5,24 +5,14 @@ Refinery::User.find_each do |user|
 end if defined?(Refinery::User)
 
 if defined?(::Refinery::Page)
-  retailers_index_page = Refinery::Page.find_by(:link_url => Refinery::Retailers.page_path_index)
+  retailers_index_page = Refinery::Page.find_by(link_url: Refinery::Retailers.page_path_index)
 
   unless retailers_index_page
     retailers_index_page = ::Refinery::Page.create({
-      :title => "Retailers",
-      :link_url => Refinery::Retailers.page_path_index,
-      :menu_match => "^(/retailers.*)|#{Refinery::Retailers.page_path_index}$",
-      :deletable => false
-    })
-    retailers_index_page.parts.create({
-      :title => "Body",
-      :body => "<p>Contact our retailers.</p>",
-      :position => 0
-    })
-    retailers_index_page.parts.create({
-      :title => "Side Body",
-      :body => "",
-      :position => 1
+      title: "Retailers",
+      link_url: Refinery::Retailers.page_path_index,
+      menu_match: "^(/retailers.*)|#{Refinery::Retailers.page_path_index}$",
+      deletable: false
     })
   end
 end

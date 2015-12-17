@@ -5,7 +5,7 @@ class CreateRetailersRetailers < ActiveRecord::Migration
       t.string :title
       t.string :contact
       t.string :address
-      t.string :country_code, :limit => 2
+      t.string :country_code, limit: 2
       t.string :state_code
       t.string :city
       t.string :zipcode
@@ -23,15 +23,14 @@ class CreateRetailersRetailers < ActiveRecord::Migration
 
   def down
     if defined?(::Refinery::UserPlugin)
-      ::Refinery::UserPlugin.destroy_all({:name => "refinerycms-retailers"})
+      ::Refinery::UserPlugin.destroy_all({name: "refinerycms-retailers"})
     end
 
     if defined?(::Refinery::Page)
-      ::Refinery::Page.delete_all(:link_url => Refinery::Retailers.page_path_index)
+      ::Refinery::Page.delete_all(link_url: Refinery::Retailers.page_path_index)
     end
 
     drop_table :refinery_retailers
 
   end
-
 end

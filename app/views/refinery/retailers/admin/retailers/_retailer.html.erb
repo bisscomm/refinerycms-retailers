@@ -1,21 +1,48 @@
+<% # setup params for various action links
+  edit_url = refinery.edit_retailers_admin_retailer_path(retailer)
+  delete_url = refinery.retailers_admin_retailer_path(retailer)
+  delete_options = {
+    class: "cancel confirm-delete",
+    data: {
+      confirm: t('message',  
+        scope: 'refinery.admin.delete', 
+        title: record_title_with_translations(retailer)
+      )
+    }
+  }
+%>
+
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(retailer) -%>">
   <span class='title'>
-    <%= retailer.title %>
+    <%= record_title_with_translations retailer %>
+    
+    <% if Refinery::I18n.frontend_locales.many? %>
+      <span class='locales'>
+        <% retailer.translations.sort_by{ |t| Refinery::I18n.frontend_locales.index(t.locale)}.each do |translation| %>
+          <% if translation.title.present? %>
+            <%= link_to refinery.edit_retailers_admin_retailer_path(retailer, switch_locale: translation.locale),
+                        class: 'locale', title: translation.locale.upcase do %>
+
+              <div class="<%=translation.locale %> locale_marker">
+                <%= locale_text_icon(translation.locale.upcase) %>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </span>
+    <% end %>
+
     <% if retailer.draft? %>
       <span class="label notice"><%= t('refinery.retailers.admin.retailers.retailer.draft') %></span>
     <% end %>
+
     <span class="preview">
       <%= inline_address(retailer) %>
     </span>
   </span>
 
   <span class='actions'>
-    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_retailers_admin_retailer_path(retailer),
-         :title => t('.edit') %>
-    <%= link_to refinery_icon_tag("delete.png"), refinery.retailers_admin_retailer_path(retailer),
-        :class => "cancel confirm-delete",
-        :title => t('.delete'),
-        :data => {:confirm => t('message', :scope => 'refinery.admin.delete', :title => retailer.title)},
-        :method => :delete %>
+    <%= action_icon(:edit,    edit_url ,  t('edit',   scope: 'refinery.admin.pages' ) ) %>
+    <%= action_icon(:delete,  delete_url, t('delete', scope: 'refinery.admin.pages' ), delete_options ) %>
   </span>
 </li>

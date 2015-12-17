@@ -10,6 +10,10 @@ en:
             create_new: Add New Retailer
             reorder: Reorder Retailers
             reorder_done: Done Reordering Retailers
+          form:
+            please_select_a_country: Select a country
+          subregion_select:
+            please_select_a_country_above: Select a country before
           records:
             title: Retailers
             sorry_no_results: Sorry! There are no results found.
@@ -21,7 +25,7 @@ en:
             draft: Draft
       retailers:
         index:
-          retailers_countries: Pays
+          retailers_countries: Countries
         retailer:
           email: "Email <span class='visuallyhidden'>%{title}</span>"
           website: "Website <span class='visuallyhidden'>%{title}</span>"
@@ -34,6 +38,9 @@ en:
         title: Title
         contact: Contact
         address: Address
+        country_code: Country
+        state_code: State
+        city: City
         zipcode: Zipcode
         phone: Phone
         fax: Fax

@@ -10,6 +10,7 @@ module Refinery
         Refinery::Plugin.register do |plugin|
           plugin.name = "refinery_retailers"
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.retailers_admin_retailers_path }
+          plugin.menu_match = %r{refinery/(retailers)(/.+?)?$}
           plugin.pathname = root
           
         end

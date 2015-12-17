@@ -7,9 +7,9 @@ module Refinery
 
       validates :address, :presence => true, :uniqueness => true
 
-      acts_as_indexed :fields => [:title, :contact, :address, :country_code, :state_code, :city]
 
       default_scope { order('lower(title) ASC') }
+      acts_as_indexed fields: [:title, :contact, :address, :country_code, :state_code, :city] if defined?(Refinery::ActsAsIndexed::Engine)
 
       scope :published, -> { where :draft => false }
 

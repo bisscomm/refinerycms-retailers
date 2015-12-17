@@ -16,7 +16,6 @@ Gem::Specification.new do |s|
 
   # Runtime dependencies
   s.add_dependency             'refinerycms-core',           '~> 3.0.0'
-  s.add_dependency             'acts_as_indexed',            '~> 0.8.0'
   s.add_dependency             'carmen-rails',               '~> 1.0.1'
   s.add_dependency             'actionview-encoded_mail_to', '~> 1.0.5'
 

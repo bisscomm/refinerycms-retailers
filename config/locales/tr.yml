@@ -1,7 +1,7 @@
 tr:
   refinery:
     plugins:
-      retailers:
+      refinerycms_retailers:
         title: Retailers
     retailers:
       admin:

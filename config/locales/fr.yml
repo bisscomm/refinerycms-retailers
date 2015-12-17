@@ -1,7 +1,7 @@
 fr:
   refinery:
     plugins:
-      refinerycms_retailers:
+      refinery_retailers:
         title: Détaillants
     retailers:
       admin:

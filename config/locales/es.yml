@@ -1,7 +1,7 @@
 es:
   refinery:
     plugins:
-      refinerycms_retailers:
+      refinery_retailers:
         title: Retailers
 #        article: masculino/femenino
     retailers:

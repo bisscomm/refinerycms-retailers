@@ -8,7 +8,7 @@ module Refinery
 
       before_inclusion do
         Refinery::Plugin.register do |plugin|
-          plugin.name = "refinerycms_retailers"
+          plugin.name = "refinery_retailers"
           plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.retailers_admin_retailers_path }
           plugin.pathname = root
           

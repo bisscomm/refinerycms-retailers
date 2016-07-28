@@ -42,6 +42,7 @@ module Refinery
             it "should fail" do
               click_button "Save"
 
+              expect(page).to have_content("Title can't be blank")
               expect(page).to have_content("Address can't be blank")
               expect(subject.class.count).to eq(0)
             end

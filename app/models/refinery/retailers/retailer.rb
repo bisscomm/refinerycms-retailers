@@ -7,6 +7,7 @@ module Refinery
 
       before_validation :smart_add_url_protocol
 
+      validates :title, presence: true
       validates :address, presence: true, uniqueness: true
 
       acts_as_indexed fields: [:title, :contact, :address, :country_code, :state_code, :city] if defined?(Refinery::ActsAsIndexed::Engine)

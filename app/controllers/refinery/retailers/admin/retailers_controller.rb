@@ -4,6 +4,7 @@ module Refinery
       class RetailersController < ::Refinery::AdminController
         crudify :'refinery/retailers/retailer',
                 paging: false,
+                include: [:translations],
                 order: "lower(title) ASC"
 
         helper :'refinery/retailers/retailers'

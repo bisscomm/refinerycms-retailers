@@ -29,6 +29,10 @@ module Refinery
         end
 
         describe "validations" do
+          it "requires title" do
+            expect(FactoryGirl.build(:retailer, title: "")).not_to be_valid
+          end
+
           it "requires address" do
             expect(FactoryGirl.build(:retailer, address: "")).not_to be_valid
           end

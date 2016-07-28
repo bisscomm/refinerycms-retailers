@@ -3,9 +3,9 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-retailers'
-  s.version           = '3.0.0'
+  s.version           = '3.0.1'
   s.description       = 'Ruby on Rails Retailers extension for Refinery CMS'
-  s.date              = '2014-10-22'
+  s.date              = '2016-07-28'
   s.summary           = 'Retailers extension for Refinery CMS'
   s.email             = %q{info@bisscomm.com}
   s.homepage          = %q{http://www.bisscomm.com}

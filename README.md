@@ -10,19 +10,17 @@ Retailers engine for [Refinery CMS](http://refinerycms.com) allows you to displa
 
 ## Requirements
 
-This version of `refinerycms-retailers` supports Refinery 3.x and Rails 4.1.x.
-
 * [Refinery CMS](http://refinerycms.com) version 3.0.0 or above.
 
 ## Install
 
-Open up your ``Gemfile`` and add at the bottom this line:
+Open up your `Gemfile` and add at the bottom this line:
 
 ```ruby
 gem 'refinerycms-retailers', github: 'bisscomm/refinerycms-retailers', branch: 'master'
 ```
 
-Now, run ``bundle install``
+Now, run `bundle install`
 
 Next, to install the retailers plugin run:
 

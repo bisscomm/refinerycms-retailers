@@ -16,8 +16,8 @@ module Refinery
       protected
 
       def smart_add_url_protocol
-        if !self.website.empty?
-          if !(self.website[/\Ahttp:\/\//] || self.website[/\Ahttps:\/\//])
+        if self.website.present?
+          unless (self.website[/\Ahttp:\/\//] || self.website[/\Ahttps:\/\//])
             self.website = "http://#{self.website}"
           end
         end

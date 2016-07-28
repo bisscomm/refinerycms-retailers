@@ -6,7 +6,7 @@
     data: {
       confirm: t('message',  
         scope: 'refinery.admin.delete', 
-        title: record_title_with_translations(retailer)
+        title: translated_field(retailer, :title)
       )
     }
   }
@@ -14,7 +14,7 @@
 
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(retailer) -%>">
   <span class='title'>
-    <%= record_title_with_translations retailer %>
+    <%= translated_field(retailer, :title) %>
     
     <% if Refinery::I18n.frontend_locales.many? %>
       <span class='locales'>

@@ -9,7 +9,5 @@ notifications:
   webhooks:
     - https://webhooks.gitter.im/e/2e2c6c0937f4fe221327
 rvm:
-  - 2.2
-  - 2.1
-  - 2.0.0
+  - 2.3.1
 sudo: false

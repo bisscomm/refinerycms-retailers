@@ -3,6 +3,7 @@ module Refinery
     module Admin
       class RetailersController < ::Refinery::AdminController
         crudify :'refinery/retailers/retailer',
+                paging: false,
                 order: "lower(title) ASC"
 
         helper :'refinery/retailers/retailers'
